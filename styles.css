@@ -153,6 +153,31 @@ nav ul li a:hover {
 .carrusel button.next {
   right: 10px;
 }
+@media (max-width: 600px) {
+    .carrusel {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .carrusel button.prev,
+    .carrusel button.next {
+        transform: translateY(0);
+        top: auto;
+        position: static;
+        margin: 10px;
+    }
+
+    .contenedor-imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-juego {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+}
 
 
 
@@ -213,6 +238,22 @@ nav ul li a:hover {
   padding: 15px;
   border-radius: 10px;
 }
+@media (max-width: 600px) {
+    .lista-actualizaciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actualizacion-item {
+        width: 90%;
+    }
+
+    .actualizacion-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .actualizacion-item {
     display: flex;
@@ -260,6 +301,28 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
 }
+@media (max-width: 600px) {
+    .lista-gotys {
+        align-items: center;
+    }
+
+    .goty-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .goty-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-goty {
+        text-align: center;
+    }
+}
+
 
 .lista-gotys {
     display: flex;
