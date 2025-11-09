@@ -1,3 +1,7 @@
+/* -------------------- */
+/*   TUS ESTILOS BASE   */
+/* -------------------- */
+
 body {
     background-color: #0D1B2A;
     color: white;
@@ -14,29 +18,98 @@ header {
     background-color: #1B263B;
     padding: 15px 30px;
 }
+
+/* LOGO */
+#logo {
+    max-width: 20%;
+    height: auto;
+}
+#logo:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+/* MENÚ DESKTOP */
+nav ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    font-size: 30px;
+    font-family: 'Bebas Neue', monospace;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: #cce8ff;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/* ------------------------------- */
+/*      BOTÓN MENÚ HAMBURGUESA    */
+/* ------------------------------- */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
+
+/* ------------------------------- */
+/*  CARRUSEL (versión desktop)     */
+/* ------------------------------- */
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #1B263B;
+    padding: 100px;
+    border-radius: 50px;
+}
+
+.carrusel button {
+    background-color: rgba(0,0,0,0.6);
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contenedor-imagen img {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------------- */
+/*  MODO CELULAR    */
+/* ---------------- */
 @media (max-width: 600px) {
+
+    /* CABECERA */
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
 
     .menu-toggle {
         display: block;
         margin-left: auto;
     }
 
-    nav {
-        width: 100%;
-    }
-
     nav ul.menu {
         display: none;
         flex-direction: column;
-        gap: 0;
         width: 100%;
         background-color: #1B263B;
         padding: 10px 0;
@@ -48,123 +121,18 @@ header {
     }
 
     nav ul li {
-        width: 100%;
         text-align: left;
+        padding-left: 20px;
     }
 
-    nav ul li a {
-        display: block;
-        padding: 10px 20px;
-        width: 100%;
-    }
-}
-
-
-
-#Destacados {
-  position: relative;
-  text-align: center;
-  font-family: 'bebas-neue', monospace;
-  background-color: linear-gradient( #1B263B, #1B263B);
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.menu {
-  display: flex;
-  font-size: 30px;
-  font-family:'Bebas Neue', monospace;
-}
-
-#logo {
-  max-width: 20%;
-  height: auto;
-}
-#logo:hover {
-  transform: scale(1.01);
-  transition: transform 0.3s ease;
-}
-
-nav ul {
-  list-style: none;
-  gap: 1.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-nav ul li a:hover {
-    color: #cce8ff;
-    text-decoration: underline;
-    transition: ease-in-out 0.3s;
-}
-
-/* Carrusel */
-.carrusel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    background-color: #1B263B;
-    padding: 100px;
-    border-radius: 50px;
-}
-
-.carrusel button.prev{
-  position: center;
-  top: 10%;
-  transform: translateY(-160%);
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
-  color: white; /* Color de la flecha */
-  border: none;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 30% 0% 0% 20%;
-  transition: background-color 0.3s;
-}
-.carrusel button.next {
-    position: center;
-    top: 10%;
-    transform: translateY(-160%);
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
-    color: white; /* Color de la flecha */
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 0% 30% 30% 0%;
-    transition: background-color 0.3s;
-  }
-
-.carrusel button.prev:hover,
-.carrusel button.next:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.carrusel button.prev {
-  left: 10px;
-}
-
-.carrusel button.next {
-  right: 10px;
-}
-@media (max-width: 600px) {
+    /* CARRUSEL MÓVIL */
     .carrusel {
         padding: 20px;
         flex-direction: column;
     }
 
-    .carrusel button.prev,
-    .carrusel button.next {
-        transform: translateY(0);
-        top: auto;
-        position: static;
-        margin: 10px;
+    .carrusel button {
+        margin-top: 10px;
     }
 
     .contenedor-imagen img {
@@ -174,571 +142,36 @@ nav ul li a:hover {
 
     .info-juego {
         position: static;
-        transform: none;
         margin-top: 10px;
+        text-align: center;
     }
-}
 
-
-
-.contenedor-imagen {
-    position: relative;
-    text-align: center;
-    transform: translateY(-40%);
-}
-
-.contenedor-imagen img {
-    width: 500px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.info-juego {
-    position: absolute;
-    right: 10px;    
-    top: 120%;
-    transform: translateY(-28%);
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.precio {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/*ACTUALIZACIONES */
-.actualizaciones {
-  font-family: 'bebas-neue', monospace;
-  margin-top: 60px;
-  padding: 20px;
-  text-align: center;
-}
-
-#Act{
-  position: relative;
-  text-align: center;
-  font-family: 'bebas-neue', monospace;
-  background-color: linear-gradient( #1B263B, #1B263B);
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-
-.lista-actualizaciones {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 15px;
-  border-radius: 10px;
-}
-@media (max-width: 600px) {
+    /* ACTUALIZACIONES */
     .lista-actualizaciones {
         flex-direction: column;
         align-items: center;
     }
-
     .actualizacion-item {
         width: 90%;
     }
-
     .actualizacion-item img {
         width: 100%;
         height: auto;
     }
-}
 
-
-.actualizacion-item {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom, #1B263B, #0D1B2A);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 5px 0 rgba(0, 0, 0, 0.3);
-    gap: 15px;
-    align-items: center;
-    width: 180px;
-}
-.actualizacion-item:hover {
-  scale: 1.05;
-  transition: all 0.3s ease;
-  background: linear-gradient(to bottom, #1B263B, #0D1B2A);
-  box-shadow: 5px 0 rgba(0, 0, 0, 0.5);
-}
-
-
-.actualizacion-item img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.info-actualizacion {
-  text-align: start;
-  color: white;
-}
-
-.info-actualizacion h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
-
-
-/* GOTYs */
-.gotys {
-  font-family: 'bebas-neue', monospace;
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-}
-@media (max-width: 600px) {
+    /* GOTYs */
     .lista-gotys {
         align-items: center;
     }
 
     .goty-item {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         width: 90%;
+        text-align: center;
     }
 
     .goty-item img {
         width: 100%;
         height: auto;
     }
-
-    .info-goty {
-        text-align: center;
-    }
 }
-
-
-.lista-gotys {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.goty-item {
-    display: flex;
-    background: linear-gradient(to right, #1B263B, #0D1B2A);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 10px rgba(0,0,0,0.3);
-    gap: 15px;
-    align-items: flex-start;
-  }
-  
-  .goty-item img {
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .info-goty {
-    text-align: start;
-    color: white;
-  }
-  
-  .info-goty h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #ffffff;
-  }
- /*Indies*/
-.Indies {
-    font-family: 'bebas-neue', monospace;
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.game {
-    background-color: #1d3950;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-}
-
-.game:hover {
-    transform: scale(1.02);
-}
-
-/* Imagen del juego */
-.game img {
-    width: 100%;
-    height: auto;
-}
-
-/* Info del juego */
-.info {
-    padding: 15px 20px;
-}
-
-.info h2 {
-    margin-top: 0;
-    color: #66c0f4;
-}
-
-.info p {
-    font-size: 1em;
-    margin-bottom: 12px;
-    color: #cce8ff;
-}
-
-.price {
-    display: inline-block;
-    background-color: #4c6b88;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.95em;
-}
-
-/* Responsive (celular) */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-    .info p {
-        font-size: 0.95em;
-    }
-    .price {
-        font-size: 0.85em;
-    }
-}
-  
- /* FONDO Y FORMATO DE NOTICIAS */
-body.noticias-bg {
-  background-color: #0D1B2A;
-  font-family: 'Arial', sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-.noticias-container {
-  padding: 20px;
-}
-
-.noticias-container h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 36px;
-  color: white;
-}
-
-.noticia {
-  margin-bottom: 50px;
-  border-bottom: 2px solid #1f4b6e;
-  padding-bottom: 20px;
-}
-
-.noticia h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #add8ff;
-}
-
-.contenido-noticia {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.contenido-noticia img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-.resumen {
-  background-color: #142e4d;
-  padding: 15px;
-  border-radius: 10px;
-  flex: 1;
-}
-
-.resumen p {
-  font-family: 'bebas-neue', monospace;
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.leer-mas {
-  color: #64baff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.leer-mas:hover {
-  text-decoration: underline;
-}
-
-
-
-/*Soundtracs*/
-.soundtrack-section {
-  padding: 40px 20px;
-}
-
-.titulo-seccion {
-  font-family: 'bebas-neue', monospace;
-  color: #ffffff;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.soundtrack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-
-.soundtrack-card {
-  background-color: #1a1a1a;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
-}
-
-.soundtrack-card:hover {
-  transform: scale(1.03);
-}
-
-.soundtrack-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.soundtrack-content {
-  padding: 16px;
-}
-
-.soundtrack-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #f5f5f5;
-}
-
-.soundtrack-content p {
-  font-size: 0.9rem;
-  color: #cccccc;
-  margin: 8px 0 16px;
-}
-
-.btn-group {
-  display: flex;
-  gap: 10px;
-}
-
-.btn {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-demo {
-  background: #2d2c6e;
-  color: white;
-}
-
-.btn-demo:hover {
-  background: #162f3d;
-}
-.btn-stop {
-  background: #555;
-  color: white;
-}
-
-.btn-stop:hover {
-  background: #777;
-}
-
-
-.btn-album {
-  background: #03da27;
-  color: #000;
-}
-
-.btn-album:hover {
-  background: #01c732;
-}
-
-/*Contacto*/
-.contact-form {
-  width: 100%;
-  max-width: 500px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #1b1f2a;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  color: #fff;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 2px solid #333;
-  border-radius: 8px;
-  background-color: #0f111a;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #4f9bff;
-  outline: none;
-  background-color: #1a1d2a;
-}
-
-.contact-form button {
-  background-color: #4f9bff;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #357ae8;
-}
-
-.feedback {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-#help {
-  opacity: 0;
-  animation: fadeInText 1s ease-in forwards;
-  font-family: 'bebas-neue', monospace;
-  text-align: center;
-  margin-top: 20px;
-  color: white;
-}
-
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* ----- RESETEO GENERAL ----- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* ----- ESTILOS NORMALES DE PC (NO SE TOCAN) ----- */
-/* Todo lo que ya tenés hecho en tu diseño de PC se mantiene igual */
-
-/* ----- ADAPTACIÓN A PANTALLAS MÓVILES ----- */
-
-/* Tablets */
-@media (max-width: 992px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .container {
-    width: 95%;
-    margin: auto;
-  }
-
-  header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 600px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  header nav a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-align: left;
-  }
-
-  .container {
-    width: 90%;
-  }
-
-  section {
-    padding: 20px 0;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  footer {
-    font-size: 14px;
-    text-align: center;
-    padding: 15px 0;
-  }
-}
-
-
-
-
-
