@@ -111,3 +111,7 @@ const form = document.getElementById("contactForm");
       clearTimeout(currentTimeout);
     }
   }
+function toggleMenu() {
+    const menu = document.querySelector(".menu");
+    menu.classList.toggle("menu-abierto");
+}
