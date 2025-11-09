@@ -741,4 +741,16 @@ body.noticias-bg {
         position: static;
     }
 }
+/* Forzar que NO aparezca en PC */
+.menu-toggle {
+    display: none !important;
+}
+
+/* Solo aparece en móvil */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block !important;
+    }
+}
+
 
