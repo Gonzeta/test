@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Soundtracks | BGM Team</title>
+            <link rel="stylesheet" href="styles.css">
+            <script src="script.js"></script>
+            <link href="https://fonts.google.com/specimen/Bebas+Neue?preview.text=Marca%20personal" rel="stylesheet">
+        </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html">
+                <img id="logo" src="IMG/bgm.png">
+                </a>
+            </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="Indies.html">Indies</a></li>
+                        <li><a href="Soundtracks.html">Soundtracks</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>        
+                    </ul>
+                </nav>
+        </header>
+
+
+        <section class="soundtrack-section">
+    <h2 class="titulo-seccion">Soundtracks</h2>
+    <div class="soundtrack-grid">
+
+      <!-- Cyberpunk -->
+      <div class="soundtrack-card">
+        <img src="IMG/juego5.jpg" alt="Cyberpunk OST">
+        <div class="soundtrack-content">
+          <h3>Cyberpunk 2077</h3>
+          <p>Synthwave puro para recorrer Night City con estilo.</p>
+          <audio id="demo-cyberpunk" src="MU/Hyper - Spoiler  Cyberpunk 2077 OST.mp3"></audio>
+          <div class="btn-group">
+            <button class="btn btn-demo" onclick="document.getElementById('demo-cyberpunk').play()">Reproducir Demo</button>
+            <button class="btn btn-stop" onclick="pauseDemo('demo-cyberpunk')">Pausar Demo</button>
+            <button class="btn btn-album" onclick="window.open('https://open.spotify.com/playlist/37i9dQZF1DWYMokBiQj5qF')">Ver Álbum</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Witcher 3 -->
+      <div class="soundtrack-card">
+        <img src="IMG/Sounds/TheWitcher3.jpg" alt="Witcher 3 OST">
+        <div class="soundtrack-content">
+          <h3>The Witcher 3</h3>
+          <p>Melodías épicas para acompañar a Geralt en su viaje.</p>
+          <audio id="demo-witcher" src="MU/The Witcher 3_ Wild Hunt - The Trail - Trailer Music.mp3"></audio>
+          <div class="btn-group">
+            <button class="btn btn-demo" onclick="document.getElementById('demo-witcher').play()">Reproducir Demo</button>
+            <button class="btn btn-stop" onclick="pauseDemo('demo-witcher')">Pausar Demo</button>
+            <button class="btn btn-album" onclick="window.open('https://open.spotify.com/intl-es/album/6pYNEn4tMc6gdv5fIZf5yn')">Ver Álbum</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skyrim -->
+      <div class="soundtrack-card">
+        <img src="IMG/Sounds/Skyrim.jpg" alt="Skyrim OST">
+        <div class="soundtrack-content">
+          <h3>Skyrim</h3>
+          <p>Las tierras de Tamriel cobran vida con esta música legendaria.</p>
+          <audio id="demo-skyrim" src="MU/Dragonborn.mp3"></audio>
+          <div class="btn-group">
+            <button class="btn btn-demo" onclick="document.getElementById('demo-skyrim').play()">Reproducir Demo</button>
+            <button class="btn btn-stop" onclick="pauseDemo('demo-skyrim')">Pausar Demo</button>
+            <button class="btn btn-album" onclick="window.open('https://open.spotify.com/intl-es/album/25r7pEf31viAbsoVHC6bQ4')">Ver Álbum</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallout 4 -->
+      <div class="soundtrack-card">
+        <img src="IMG/Sounds/Fallout.jpg" alt="Fallout 4 OST">
+        <div class="soundtrack-content">
+          <h3>Fallout 4</h3>
+          <p>Música de un futuro postapocalíptico con alma de los 50's.</p>
+          <audio id="demo-fallout" src="MU/Fallout 4 Main Theme.mp3"></audio>
+          <div class="btn-group">
+            <button class="btn btn-demo" onclick="document.getElementById('demo-fallout').play()">Reproducir Demo</button>
+            <button class="btn btn-stop" onclick="pauseDemo('demo-fallout')">Pausar Demo</button>
+            <button class="btn btn-album" onclick="window.open('https://open.spotify.com/intl-es/album/7rGidzYxexJJ0OKin1RRHx')">Ver Álbum</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jet Set Radio -->
+    <div class="soundtrack-card">
+        <img src="IMG/Sounds/JSR.jpg" alt="JetSetRadio OST">
+        <div class="soundtrack-content">
+          <h3>Jet Set Radio</h3>
+          <p>Bang!</p>
+          <audio id="demo-Jsr" src="MU/Jet Grind Radio Soundtrack - Humming the Bassline.mp3"></audio>
+          <div class="btn-group">
+            <button class="btn btn-demo" onclick="document.getElementById('demo-Jsr').play()">Reproducir Demo</button>
+            <button class="btn btn-stop" onclick="pauseDemo('demo-Jsr')">Pausar Demo</button>
+            <button class="btn btn-album" onclick="window.open('https://open.spotify.com/playlist/1FXdqbZi9X2aBUywyIa6Ul')">Ver Álbum</button>
+          </div>
+        </div>
+      </div>
+    
+  </section>
+
+
+
+    </body>
+</html>
