@@ -723,3 +723,22 @@ body.noticias-bg {
         height: auto;
     }
 }
+@media (max-width: 600px) {
+
+    .carrusel {
+        position: relative;
+    }
+
+    .carrusel button.prev,
+    .carrusel button.next {
+        position: static !important;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .contenedor-imagen {
+        text-align: center;
+        position: static;
+    }
+}
+
