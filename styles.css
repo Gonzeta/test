@@ -667,9 +667,11 @@ body.noticias-bg {
 
     /* --- CARRUSEL --- */
     .carrusel {
-        padding: 10px;
+        
+        padding: 20px;
         flex-direction: column;
         border-radius: 20px;
+        margin-top: 20%;
     }
 
     .contenedor-imagen img {
